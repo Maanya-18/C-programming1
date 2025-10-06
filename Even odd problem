@@ -6,3 +6,13 @@ scanf("%d", &num);
 (num%2==0)?printf("%d is even", num):printf("%d is odd", num);
 return 0;
 }
+
+
+int main() {
+
+    int x;
+    scanf("%d",&x);
+    (x%2==0)?printf("Even", x):printf("Odd", x);
+    return 0;
+}
+
