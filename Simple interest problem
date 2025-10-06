@@ -1,0 +1,9 @@
+int main() {
+
+    int P, T;
+    float R, SI;
+    scanf("%d %f %d", &P, &R, &T);
+    SI=(P * R * T) / 100.0;
+    printf("%.2f\n",SI);
+    return 0;
+}
