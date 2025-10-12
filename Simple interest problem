@@ -7,3 +7,14 @@ int main() {
     printf("%.2f\n",SI);
     return 0;
 }
+
+
+int main() {
+
+    int P;
+    float R, T, SI;
+    scanf("%d %f %f", &P, &R, &T);
+    SI=(P * R * T) / 100.0;
+    printf("%.2f\n",SI);
+    return 0;
+}
