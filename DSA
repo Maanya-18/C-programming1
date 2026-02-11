@@ -1,0 +1,118 @@
+include<stdio.h>
+#define MAX 100
+int list[MAX];
+int n=0;
+void insertinBeg(int value){
+    if(n==MAX){
+        printf("list is full\n");
+        return;
+    }
+    int i;
+    for(i=n-1;i>=0;i--){
+        list[i+1]=list[i];
+
+    }
+    list[0]=value;
+    n++;
+    printf("Element inserted in the beginning");
+
+
+
+}
+void displaylist(){
+    if(n==0){
+        printf("list is empty\n");
+        return;
+    }
+    int i;
+    printf("Elements in the list are:\n");
+    for(i=0;i<n;i++){
+        printf("%d\t",list[i]);
+    }
+    printf("\n");
+}
+void insertatend(int value){
+    if(n==MAX){
+        printf("list is full\n");
+        return;
+    }
+    list[n]=value;
+    n++;
+    printf("Element inserted at the end\n");
+}
+void insertatposition(int position,int value){
+    if(n==MAX){
+        printf("list is full\n");
+    }
+    else if
+        (position<0 || position>=n)
+    printf("Inavlid position");
+    else{
+        for(int i=n-1;i>=position;i--){
+list[i+1]=list[i];
+        }
+        list[position]=value;
+        n++;
+        printf("Element Inserted");
+    }
+}
+
+int main(){
+    while(1){
+        printf("1.Insert in beginning\n");
+        printf("2.Insert at the end\n");
+        printf("3.Insert at specified position\n");
+        printf("4.Delete from beginning\n");
+        printf("5.Delete from end\n");
+        printf("6.Delete from specified position\n");
+        printf("7.Display list\n");
+        printf("8.Search elements in list\n");
+        printf("9.Update list elements \n");
+        printf("10.sort element of list\n");
+        printf("11.Exit\n");
+        int choice,data,position;
+        printf("enter choice");
+        scanf("%d",&choice);
+        switch(choice){
+            case 1:
+            printf("Enter data:");
+            scanf("%d",&data);
+            insertinBeg(data);
+            break;
+            case 2:
+            printf("Enter data:");
+            scanf("%d",&data);
+            insertatend(data);
+            break;
+            case 3:
+            printf("Enter position");
+            scanf("%d", &position);
+            printf("Enter data:");
+            scanf("%d",&data);
+            insertatposition(position,data);
+            break;
+            case 4:
+            break;
+            case 5:
+            break;
+            case 6:
+            break;
+            case 7:
+            displaylist();
+            break;
+            case 8:
+            break;
+            case 9:
+            break;
+            case 10:
+            break;
+            default:
+            printf("inavlid choice!!!\n");
+
+        }
+
+
+    }
+
+        return 0;
+}
